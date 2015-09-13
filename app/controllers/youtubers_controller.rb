@@ -1,0 +1,2 @@
+class YoutubersController < ApplicationController
+end
