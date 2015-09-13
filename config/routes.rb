@@ -1,4 +1,37 @@
 Rails.application.routes.draw do
+
+  root '/' => 'videos#index'
+
+  get '/videos' => 'videos#index'
+  get '/videos/new' => 'videos#new', as: 'new_video'
+  post '/videos' => 'videos#create'
+  get '/videos/:id' => 'videos#show', as: 'video'
+  get '/videos/:id/edit' => 'videos#edit', as: 'edit_video'
+  put '/videos/:id' => 'videos#update'
+  delete '/videos/:id/delete' => 'videos#delete'
+
+  get '/youtubers' => 'youtubers#index'
+  get '/youtubers/new' => 'youtubers#new', as: 'new_youtuber'
+  post '/youtubers' => 'youtubers#create'
+  get '/youtubers/:id' => 'youtubers#show', as: 'youtuber'
+  get '/youtubers/:id/edit' => 'youtubers#edit', as: 'edit_youtuber'
+  put '/youtubers/:id' => 'youtubers#update'
+  delete '/youtubers/:id/delete' => 'youtubers#delete'
+
+  get '/subscribers' => 'subscribers#index'
+  get '/subscribers/new' => 'subscribers#new', as: 'new_subscriber'
+  post '/subscribers' => 'subscribers#create'
+  get '/subscribers/:id' => 'subscribers#show', as: 'subscriber'
+  get '/subscribers/:id/edit' => 'subscribers#edit', as: 'edit_subscriber'
+  put '/subscribers/:id' => 'subscribers#update'
+  delete '/subscribers/:id/delete' => 'subscribers#delete'
+
+  resources :videos
+
+  resources :youtubers
+
+  resources :subscribers
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
