@@ -16,7 +16,7 @@ s1 = Subscriber.create(name: 'Hannah', age: 16, location: 'Ohio')
 s2 = Subscriber.create(name: 'Dave', age: 56, location: 'London')
 s3 = Subscriber.create(name: 'Debi', age: 24, location: 'Manila')
 s4 = Subscriber.create(name: 'Georgia', age: 17, location: 'Melbourne')
-s1 = Subscriber.create(name: 'Luis', age: 13, location: 'Madrid')
+s5 = Subscriber.create(name: 'Luis', age: 13, location: 'Madrid')
 
 y1.videos.create(title: 'I DESTROYED MY HOUSE', category: 'People & Blogs', length: 4.13)
 y2.videos.create(title: 'SPOILER ALERT', category: 'People & Blogs', length: 5.36)
